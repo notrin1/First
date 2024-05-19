@@ -1,0 +1,49 @@
+GameName = "UGC For Follow!" 
+
+tab1name = "Main" 
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))() 
+
+local GameName = Library:NewWindow(GameName) 
+
+local Tab1 = GameName:NewSection(tab1name) 
+
+Tab1:CreateToggle("Auto Spin Slow", function(value)
+_G.name = value
+while _G.name == true do
+_G.on = true
+while _G.on and task.wait() do
+for i = 1,100 do
+game:GetService("ReplicatedStorage").Events.SpinFinish:FireServer()
+end
+end
+wait(5) 
+end
+end) 
+
+Tab1:CreateToggle("Spam For Fast", function(value)
+_G.name = value
+while _G.name == true do
+_G.on = true
+while _G.on and task.wait() do
+for i = 1,100 do
+game:GetService("ReplicatedStorage").Events.SpinFinish:FireServer()
+end
+end
+wait(5) 
+end
+end) 
+
+Tab1:CreateButton("Anti Afk", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+end) 
+
+Tab1:CreateButton("Rejoin", function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
+end)
+local Tab2 = GameName:NewSection("Other") 
+
+Tab2:CreateButton("Auto Claim", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OneCreatorX/OneCreatorX/main/Scripts/UGCfree/Ning/AutoClaimUGC.lua"))()
+end)
+local Tab2 = GameName:NewSection("FurryRinn")
